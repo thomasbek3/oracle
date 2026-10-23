@@ -2,6 +2,10 @@ import { describe, expect, it, vi } from "vitest";
 
 import type { RunOracleOptions, RunOracleDeps, OracleResponse } from "../../src/oracle.js";
 
+// Vitest 4.1's resetModules() makes a later vi.importActual("chalk") resolve to an empty
+// module. Keep the first real import and reuse it for every render-test mock.
+let cachedChalk: typeof import("chalk") | undefined;
+
 async function loadRunOracleWithTty(isTty: boolean, mockRendered?: string) {
   const originalTty = (process.stdout as { isTTY?: boolean }).isTTY;
   const originalForceColor = process.env.FORCE_COLOR;
@@ -11,7 +15,8 @@ async function loadRunOracleWithTty(isTty: boolean, mockRendered?: string) {
   // `runOracle` treats a "rich TTY" as `stdout.isTTY && chalk.level > 0`.
   // In Vitest, Chalk can be preloaded before FORCE_COLOR is set, so force a non-zero level.
   vi.doMock("chalk", async () => {
-    const actual = await vi.importActual<typeof import("chalk")>("chalk");
+    cachedChalk ??= await vi.importActual<typeof import("chalk")>("chalk");
+    const actual = cachedChalk;
     // biome-ignore lint/style/useNamingConvention: Chalk exports use PascalCase
     const CHALK_CTOR = (actual as unknown as { Chalk?: new (opts: { level: number }) => unknown })
       .Chalk;
