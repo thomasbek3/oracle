@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Security
+
+- Dependencies: patch critical and high advisories with the smallest same-major releases. Express 5.3.0 brings `proxy-addr` 2.0.8 (GHSA-jqcg-44mw-7w3h) plus patched `body-parser` and `qs`. The MCP SDK moves to 1.32.0, `zod` 4 to 4.6.6, and locked transitive packages (`protobufjs`, `ws`, `hono`, `fast-uri`, `ip-address`, `path-to-regexp`, `basic-ftp` 5.x, and the Vite/Vitest toolchain) move to the first release that clears those alerts.
+
 ## 0.9.0 — 2026-03-08
 
 ### Changed

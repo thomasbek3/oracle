@@ -57,7 +57,7 @@
     "@anthropic-ai/tokenizer": "^0.0.4",
     "@google/genai": "^1.44.0",
     "@google/generative-ai": "^0.24.1",
-    "@modelcontextprotocol/sdk": "^1.27.1",
+    "@modelcontextprotocol/sdk": "^1.32.0",
     "@steipete/sweet-cookie": "^0.2.0",
     "chalk": "^5.6.2",
     "chrome-launcher": "^1.2.1",
@@ -73,11 +73,11 @@
     "markdansi": "0.2.1",
     "openai": "^6.27.0",
     "osc-progress": "^0.3.0",
-    "qs": "^6.15.0",
+    "qs": "^6.16.0",
     "shiki": "^4.0.1",
     "toasted-notifier": "^10.1.0",
     "tokentally": "^0.1.1",
-    "zod": "^4.3.6"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@anthropic-ai/tokenizer": "^0.0.4",
@@ -85,7 +85,7 @@
     "@types/chrome-remote-interface": "^0.33.0",
     "@types/inquirer": "^9.0.9",
     "@types/node": "^25.3.5",
-    "@vitest/coverage-v8": "4.0.18",
+    "@vitest/coverage-v8": "4.1.0",
     "devtools-protocol": "0.0.1595872",
     "es-toolkit": "^1.45.1",
     "esbuild": "^0.27.3",
@@ -94,7 +94,7 @@
     "puppeteer-core": "^24.38.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
+    "vitest": "^4.1.0"
   },
   "devEngines": {
     "runtime": [
@@ -110,7 +110,35 @@
   "packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b",
   "pnpm": {
     "overrides": {
-      "devtools-protocol": "0.0.1595872"
+      "devtools-protocol": "0.0.1595872",
+      "@modelcontextprotocol/sdk": "1.32.0",
+      "express": "5.3.0",
+      "express-rate-limit": "8.5.1",
+      "proxy-addr": "2.0.8",
+      "body-parser": "2.4.0",
+      "qs": "6.16.0",
+      "basic-ftp": "5.3.1",
+      "brace-expansion@^2.0.0": "2.1.6",
+      "fast-uri": "3.1.7",
+      "hono": "4.12.25",
+      "ip-address": "10.3.1",
+      "nanoid@^3.0.0": "3.3.18",
+      "path-to-regexp": "8.4.0",
+      "picomatch@^2.0.0": "2.3.2",
+      "picomatch@^4.0.0": "4.0.4",
+      "postcss": "8.5.18",
+      "protobufjs": "7.6.1",
+      "rollup": "4.59.0",
+      "source-map-js": "1.2.2",
+      "tinypool": "2.1.2",
+      "esbuild": "0.27.3",
+      "tinyglobby": "0.2.15",
+      "vite": "7.3.7",
+      "vitest": "4.1.0",
+      "@vitest/coverage-v8": "4.1.0",
+      "ws@^7.0.0": "7.5.11",
+      "ws@^8.0.0": "8.21.0",
+      "zod@^4.0.0": "4.6.6"
     },
     "onlyBuiltDependencies": [
       "@cdktf/node-pty-prebuilt-multiarch",
